@@ -5,6 +5,8 @@ using System.Web.Services;
 
 namespace TestProject
 {
+	[WebService(Namespace = "http://microsoft.com/webservices/")]
+	[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 	class Service1
 	{
 		[WebMethod]
