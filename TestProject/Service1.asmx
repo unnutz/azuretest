@@ -13,9 +13,9 @@ namespace TestProject
 		// NOTE THAT METHOD DOESN'T HAVE ANY PARAMETERS!
 		// INSTEAD WE GRAB ADDITIONAL DATA FROM HttpContext.Current.Request.Form
 		// SEE date VARIABLE
-		public string WorkerDocumentsSave(string date)
+		public string WorkerDocumentsSave()
 		{
-			// string date = HttpContext.Current.Request.Form.Get("date");
+			string date = HttpContext.Current.Request.Form.Get("date");
 
 			HttpPostedFile uploadedFile = HttpContext.Current.Request.Files[0];
 			using (var fileStream = new System.IO.FileStream(AppDomain.CurrentDomain.BaseDirectory + uploadedFile.FileName, System.IO.FileMode.Create, System.IO.FileAccess.Write))
